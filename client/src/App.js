@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import Home from './pages/Home';
-import { Login } from './pages/Login';
+import Login from './pages/Login';
 import Reviews from './pages/Reviews';
+import WriteReview from './pages/WriteReview';
 import PrivateRoute from './PrivateRoute';
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
       <Router>
         <Routes>
           <Route path='/login' element={<Login/>}></Route>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path="/reviews" location="/reviews" element={<PrivateRoute/>} >
-            <Route path="/reviews" element={<Reviews/>} />
+          <Route path="/" element={<Reviews/>} />
+          <Route path="/review" location="/review" element={<PrivateRoute/>} >
+            <Route path="/review" element={<WriteReview/>} />
           </Route>
         </Routes>
       </Router>
