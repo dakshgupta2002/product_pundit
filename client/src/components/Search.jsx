@@ -5,7 +5,7 @@ export default function Search({
   setQuery,
 }) {
   return (
-    <form className="max-w-sm px-4">
+    <form className="w-100 px-4 py-4">
       <div className="relative">
         <svg
           xmlns="http://www.w3.org/2000/svg"

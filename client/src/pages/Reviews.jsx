@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import Search from '../components/Search'
 import { Navbar } from '../components/Navbar'
 import { get } from '../common/api';
-import Product from '../components/Product';
+import ProductItem from '../components/ProductItem';
 
 export default function Reviews() {
-  const [products, setProducts] = useState([{name: 'produc1'}, {name: 'produc2'}]);
+  const [products, setProducts] = useState([{name: 'produc1'}, {name: 'produc2'}, {name: 'produc2'}, {name: 'produc2'}]);
   const [query, setQuery] = useState('');
 
   useEffect( () => {
     const getProducts = setTimeout(async () => {
       const res = await get(`reviews?query=${query}`);
-      setProducts(res);
+      // setProducts(res);
     }, 500);
 
     return () => clearTimeout(getProducts);
@@ -20,11 +20,12 @@ export default function Reviews() {
   return (
     <div>
       <Navbar/>
-      Reviews
       <Search query={query} setQuery={setQuery} />
-      {products.length > 0 && products.map((product, index) => {
-        return <Product key={index} name={product.name}/>
-      })}
+      <products className='w-100 flex flex-row flex-wrap bg-gray-200 text-gray-900'>
+        {products.length > 0 && products.map((product, index) => {
+          return <ProductItem key={index} name={product.name}/>
+        })}
+      </products>
     </div>
   )
 }
