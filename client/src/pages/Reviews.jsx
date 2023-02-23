@@ -8,7 +8,7 @@ export default function Reviews() {
   const [products, setProducts] = useState([{name: 'produc1'}, {name: 'produc2'}, {name: 'produc2'}, {name: 'produc2'}]);
   const [query, setQuery] = useState('');
 
-  useEffect( () => {
+  useEffect(() => {
     const getProducts = setTimeout(async () => {
       const res = await get(`reviews?query=${query}`);
       // setProducts(res);
@@ -27,5 +27,5 @@ export default function Reviews() {
         })}
       </products>
     </div>
-  )
+  );
 }
