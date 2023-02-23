@@ -14,4 +14,8 @@ export class ReviewsService {
     const products = await this.reviewsModel.find({ name: query});
     return products;
   }
+
+  async writeReview() {
+    
+  }
 }

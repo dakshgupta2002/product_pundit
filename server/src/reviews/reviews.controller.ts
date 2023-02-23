@@ -7,15 +7,13 @@ export class ReviewsController {
     constructor(private reviewsService: ReviewsService) {}
 
     @Get('reviews')
-    getProducts(@Query('query') query: string): Promise<Reviews[]> {
+    getProducts(@Query('query') query: string) {
         return this.reviewsService.getProducts(query); 
     }
 
     @Post('reviews')
-    async writeReview(
-        @Body('username') username: string,
-        @Body('password') password: string
+    async writeReview( //auth middleware is configured
     ) {
-        
+        return this.reviewsService.writeReview();   
     }
 }

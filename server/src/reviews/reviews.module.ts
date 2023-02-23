@@ -9,4 +9,4 @@ import { MongooseModule } from "@nestjs/mongoose";
     controllers: [ReviewsController],
     providers: [ReviewsService]
 })
-export class UserModule {}
+export class ReviewsModule {}
