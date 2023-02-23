@@ -75,9 +75,12 @@ export const Navbar = () => {
               </button>
             ) : (
               <>
-                <button className="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
-                  <Link to={"/login"}>Login</Link>
-                </button>
+                
+                  <Link to={"/login"}>
+                    <button className="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
+                    </button>Login
+                  </Link>
+                
                 <button className="bg-blue-600   p-2 rounded  ">
                   <Link
                     to={"/register"}

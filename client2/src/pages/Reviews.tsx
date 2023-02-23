@@ -1,10 +1,9 @@
 import { useState } from "react";
 import Product from "../components/Product";
 import Search from "../components/Search";
-import { pb } from "../utils/pocketbase";
 
-const result = await pb.collection("reviews").getList(1, 20, {});
-console.log(result);
+// const result = await pb.collection("reviews").getList(1, 20, {});
+// console.log(result);
 
 export default function Reviews() {
   const [products, setProducts] = useState([
