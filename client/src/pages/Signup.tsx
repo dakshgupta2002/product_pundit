@@ -22,13 +22,13 @@ export interface Record {
   verified: boolean;
 }
 
-export default function Login() {
+export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    await pb.collection("users").authWithPassword(username, password);
+    // await pb.collection("users").create(username, password);
 
     if (pb.authStore.isValid) {
       navigate("/");
@@ -39,7 +39,7 @@ export default function Login() {
     <div className="flex justify-center h-screen w-screen items-center">
       <div className="w-full md:w-1/2 flex flex-col items-center ">
         <h1 className="text-center text-2xl font-bold text-gray-600 mb-6">
-          LOGIN
+          SIGNUP
         </h1>
 
         <div className="w-3/4 mb-6">
@@ -75,7 +75,7 @@ export default function Login() {
             className="py-4 bg-blue-400 w-full rounded text-blue-50 font-bold hover:bg-blue-700"
           >
             {" "}
-            LOGIN
+            SIGNUP
           </button>
         </div>
       </div>
