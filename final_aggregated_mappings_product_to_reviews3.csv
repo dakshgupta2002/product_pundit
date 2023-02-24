@@ -1,0 +1,29 @@
+,product_title,negative,neutral,positive,final_sentiment,final_sentiment_value
+0,Apple iPhone 11,58.0,54.0,586.0,positive,0.8198757763975155
+1,Apple iPhone 8 Plu,27.0,0.0,196.0,positive,0.757847533632287
+2,Apple iPhone SE,45.0,13.0,343.0,positive,0.7680412371134021
+3,Apple iPhone SE 2022 ,10.0,8.0,32.0,negative,0.5238095238095238
+4,Asus ROG Phone 5,18.0,177.0,68.0,positive,0.5813953488372093
+5,Asus ROG Phone 5s 5G 256GB,6.0,104.0,5.0,negative,-0.09090909090909091
+6,DOOGEE V20,10.0,122.0,20.0,negative,0.3333333333333333
+7,Motorola Edge Plu,11.0,7.0,35.0,negative,0.5217391304347826
+8,Nokia X30 5G,4.0,11.0,7.0,negative,0.2727272727272727
+9,OPPO R17,1.0,1.0,10.0,positive,0.8181818181818182
+10,OPPO R17 Pr,2.0,9.0,15.0,positive,0.7647058823529411
+11,OPPO Reno8 5G,69.0,151.0,138.0,negative,0.3333333333333333
+12,OPPO Reno8 Pro,13.0,24.0,206.0,positive,0.8812785388127854
+13,OnePlus 10T,14.0,9.0,43.0,negative,0.5087719298245614
+14,OnePlus 9,81.0,102.0,146.0,negative,0.28634361233480177
+15,OnePlus 9 RT,27.0,286.0,52.0,negative,0.31645569620253167
+16,Oneplus 10 pro,42.0,92.0,194.0,positive,0.6440677966101694
+17,Oukitel WP10,3.0,19.0,4.0,negative,0.14285714285714285
+18,Samsung Galaxy S20 Ultra,3.0,3.0,20.0,positive,0.7391304347826086
+19,Samsung Galaxy Z Flip 3,0.0,66.0,0.0,negative,0.0
+20,Tecno Phantom X2 Pro,1.0,3.0,15.0,positive,0.875
+21,amsung galaxy s20 ultra,55.0,0.0,294.0,positive,0.6848137535816619
+22,flipkart_reviews_dataset,0.0,5982.0,0.0,negative,0.0
+23,iQOO 9T,0.0,1.0,3.0,negative,0.0
+24,iQOO 9T 5G,4.0,13.0,37.0,positive,0.8048780487804879
+25,motorola edge plu,5.0,3.0,12.0,negative,0.4117647058823529
+26,realme GT 2 Pr,25.0,38.0,183.0,positive,0.7596153846153846
+27,realme GT 2 Pro 5G,26.0,186.0,54.0,negative,0.35
