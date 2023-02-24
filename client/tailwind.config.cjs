@@ -7,4 +7,5 @@ module.exports = {
   darkMode: ["class", '[data-mode="dark"]'],
   content: [join(__dirname, "src/**/*.{js,ts,jsx,tsx}"), "index.html"],
   theme: {},
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };

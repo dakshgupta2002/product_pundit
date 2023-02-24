@@ -3,10 +3,10 @@ export interface ReviewsI {
   perPage: number;
   totalItems: number;
   totalPages: number;
-  items: Item[];
+  items: ProductItem[];
 }
 
-export interface Item {
+export interface ProductItem {
   collectionId: string;
   collectionName: string;
   created: Date;
@@ -54,10 +54,10 @@ export interface Products {
   perPage: number;
   totalItems: number;
   totalPages: number;
-  items: Item[];
+  items: ProductItem[];
 }
 
-export interface Item {
+export interface ProductItem {
   collectionId: string;
   collectionName: string;
   created: Date;
