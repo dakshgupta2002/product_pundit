@@ -1,38 +1,18 @@
 import { useState } from "react";
-import { useQuery } from "react-query";
-import { fetchRecords } from "../pages/Reviews";
-import { pb } from "../utils/pocketbase";
-import ProductItem from "./ProductItem";
+import { useNavigate } from "react-router-dom";
 
 export default function Search() {
-  const { data, isLoading } = useQuery("reviews", fetchRecords);
-  const [query, setQuery] = useState("aroma");
-
-  const fetchProducts = async () => {
-    const record = await pb.collection("products").getList(9, 111, {
-      filter: `name~"${query}"`,
-    });
-    return record;
-  };
-
-  const {
-    data: products,
-    refetch,
-    isLoading: loadingProduct,
-  } = useQuery("products", fetchProducts);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   const searchQuery = (event: { preventDefault: () => void }) => {
     event?.preventDefault();
-    refetch();
+    navigate(`/search/${query}`);
   };
-
-  if (isLoading || loadingProduct) {
-    return <p>Loading.......</p>;
-  }
 
   return (
     <div className="flex flex-col justify-center items-center w-full">
-      <form>
+      <form className="w-full">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium sr-only"
@@ -62,7 +42,7 @@ export default function Search() {
             type="search"
             id="default-search"
             className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search Mockups, Logos..."
+            placeholder="Search Reviews, Products..."
             required
           />
           <button
@@ -74,9 +54,6 @@ export default function Search() {
           </button>
         </div>
       </form>
-      {products?.items.map((item) => {
-        return <ProductItem key={item.id} name={item.text} />;
-      })}
     </div>
   );
 }

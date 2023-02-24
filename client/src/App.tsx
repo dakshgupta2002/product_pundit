@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Reviews from "./pages/Reviews";
+import SearchPage from "./pages/Search";
 import WriteReview from "./pages/WriteReview";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Reviews />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/review/:id" element={<WriteReview />} />
+          <Route path="/search/:query" element={<SearchPage />} />
         </Routes>
       </Router>
     </div>
