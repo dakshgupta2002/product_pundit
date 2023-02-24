@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
+import About from "./pages/About";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
 import Reviews from "./pages/Reviews";
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
 
         <Routes>
+          <Route path="/about" element={<About />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/" element={<Reviews />} />
           <Route path="/product/:id" element={<Product/>} />
