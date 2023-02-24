@@ -10,6 +10,7 @@ import {
 } from "react-vis";
 import "react-vis/dist/style.css";
 import Recommendations from "../components/Recommendations";
+import { ReviewCollection } from "../components/ReviewCollection";
 import { pb } from "../utils/pocketbase";
 import { ProductItem, ReviewsI } from "../utils/types";
 
@@ -343,27 +344,33 @@ export default function Product() {
         </div>
       </section>
 
-      <h2 className="text-black font-bold text-xl">
-        Sentiment scores calculated from consolidated reviews
-      </h2>
-      <XYPlot
-        animation={true}
-        xType="ordinal"
-        width={600}
-        height={400}
-        xDistance={100}
-      >
-        <VerticalGridLines />
-        <HorizontalGridLines />
-        <XAxis title={"Sentiments"}/>
-        <YAxis title={"Review Count"}/>
-        <VerticalBarSeries
-          barWidth={0.3}
-          className="vertical-bar-series-example"
-          // @ts-ignore
-          data={chartData}
-        />
-      </XYPlot>
+      <ReviewCollection reviews={reviews as ReviewsI} />
+
+      <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 space-y-10">
+        <header className="text-center">
+          <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+            Overall Satisfaction
+          </h2>
+        </header>
+        <XYPlot
+          animation
+          xType="ordinal"
+          width={600}
+          height={400}
+          xDistance={100}
+        >
+          <VerticalGridLines />
+          <HorizontalGridLines />
+          <XAxis />
+          <YAxis />
+          <VerticalBarSeries
+            barWidth={0.3}
+            className="vertical-bar-series-example"
+            // @ts-ignore
+            data={chartData}
+          />
+        </XYPlot>
+      </div>
 
       <Recommendations />
     </div>
