@@ -347,7 +347,7 @@ export default function Product() {
         Sentiment scores calculated from consolidated reviews
       </h2>
       <XYPlot
-        animation
+        animation={true}
         xType="ordinal"
         width={600}
         height={400}
@@ -355,8 +355,8 @@ export default function Product() {
       >
         <VerticalGridLines />
         <HorizontalGridLines />
-        <XAxis />
-        <YAxis />
+        <XAxis title={"Sentiments"}/>
+        <YAxis title={"Review Count"}/>
         <VerticalBarSeries
           barWidth={0.3}
           className="vertical-bar-series-example"

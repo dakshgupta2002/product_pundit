@@ -5,7 +5,9 @@ export default function About() {
     <div className="h-screen w-screen  max-w-xl flex flex-col justify-center">
       <div className="mx-10">
         <h3>
-          Hi, we are the Product-Pundits. We provide consolidated reviews from
+          Hi, we are the 
+          <span className="text-indigo-500"> Product-Pundits</span>
+          . We provide consolidated reviews from
           multiple platforms for a product and make it easy for you to make a
           decision for yourself. Don't trust us, trust yourself!
         </h3>

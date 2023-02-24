@@ -75,7 +75,7 @@ export default function Reviews() {
             );
           })}
         </div>
-        <Pagination />
+        <Pagination pages={3} />
       </div>
       <div className="w-4/5">
         <Category category={"Discover More"} />
@@ -92,8 +92,11 @@ export default function Reviews() {
             );
           })}
         </div>
-        <Pagination />
+        <Pagination pages={5} />
       </div>
+
+      <br/><br/>
+      
     </div>
   );
 }
