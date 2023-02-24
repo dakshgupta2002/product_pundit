@@ -48,3 +48,26 @@ export interface Product {
 }
 
 export interface ProductIDExpand {}
+
+export interface Products {
+  page: number;
+  perPage: number;
+  totalItems: number;
+  totalPages: number;
+  items: Item[];
+}
+
+export interface Item {
+  collectionId: string;
+  collectionName: string;
+  created: Date;
+  currency: string;
+  id: string;
+  name: string;
+  negative_count: number;
+  neutral_count: number;
+  picture: string;
+  positive_count: number;
+  price: number;
+  updated: Date;
+}

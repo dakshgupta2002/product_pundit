@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BlankStar, FilledStar } from "../assets/icons";
 
 export default function ProductItem({
@@ -48,5 +49,37 @@ export default function ProductItem({
         </div>
       </div>
     </div>
+  );
+}
+
+export function ProductItemNew({
+  id,
+  name,
+  description,
+  price,
+
+  image,
+}: {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}) {
+  const defImage =
+    "https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
+  return (
+    <Link to={`/product/${id}`} className="block group">
+      <img
+        src={image || defImage}
+        alt=""
+        className="h-[350px] w-full object-cover sm:h-[450px]"
+      />
+
+      <div className="mt-1.5 flex justify-between">
+        <p className="text-md text-white">{name}</p>
+        <p className="text-white">$ {price}</p>
+      </div>
+    </Link>
   );
 }

@@ -1,0 +1,256 @@
+[
+  {
+    "number": 0,
+    "product_title": "Apple iPhone 11",
+    "negative": 58,
+    "neutral": 54,
+    "positive": 586,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.8198757763975155
+  },
+  {
+    "number": 1,
+    "product_title": "Apple iPhone 8 Plu",
+    "negative": 27,
+    "neutral": 0,
+    "positive": 196,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.757847533632287
+  },
+  {
+    "number": 2,
+    "product_title": "Apple iPhone SE",
+    "negative": 45,
+    "neutral": 13,
+    "positive": 343,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.7680412371134021
+  },
+  {
+    "number": 3,
+    "product_title": "Apple iPhone SE 2022 ",
+    "negative": 10,
+    "neutral": 8,
+    "positive": 32,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.5238095238095238
+  },
+  {
+    "number": 4,
+    "product_title": "Asus ROG Phone 5",
+    "negative": 18,
+    "neutral": 177,
+    "positive": 68,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.5813953488372093
+  },
+  {
+    "number": 5,
+    "product_title": "Asus ROG Phone 5s 5G 256GB",
+    "negative": 6,
+    "neutral": 104,
+    "positive": 5,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": -0.09090909090909091
+  },
+  {
+    "number": 6,
+    "product_title": "DOOGEE V20",
+    "negative": 10,
+    "neutral": 122,
+    "positive": 20,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.3333333333333333
+  },
+  {
+    "number": 7,
+    "product_title": "Motorola Edge Plu",
+    "negative": 11,
+    "neutral": 7,
+    "positive": 35,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.5217391304347826
+  },
+  {
+    "number": 8,
+    "product_title": "Nokia X30 5G",
+    "product_id": "xlgrixqo9iemjne",
+    "negative": 4,
+    "neutral": 11,
+    "positive": 7,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.2727272727272727
+  },
+  {
+    "number": 9,
+    "product_title": "OPPO R17",
+    "negative": 1,
+    "neutral": 1,
+    "positive": 10,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.8181818181818182
+  },
+  {
+    "number": 10,
+    "product_title": "OPPO R17 Pr",
+    "product_id": "zabyfvvduik6t0k",
+    "negative": 2,
+    "neutral": 9,
+    "positive": 15,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.7647058823529411
+  },
+  {
+    "number": 11,
+    "product_title": "OPPO Reno8 5G",
+    "negative": 69,
+    "neutral": 151,
+    "positive": 138,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.3333333333333333
+  },
+  {
+    "number": 12,
+    "product_title": "OPPO Reno8 Pro",
+    "negative": 13,
+    "neutral": 24,
+    "positive": 206,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.8812785388127854
+  },
+  {
+    "number": 13,
+    "product_title": "OnePlus 10T",
+    "negative": 14,
+    "neutral": 9,
+    "positive": 43,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.5087719298245614
+  },
+  {
+    "number": 14,
+    "product_title": "OnePlus 9",
+    "negative": 81,
+    "neutral": 102,
+    "positive": 146,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.28634361233480177
+  },
+  {
+    "number": 15,
+    "product_title": "OnePlus 9 RT",
+    "negative": 27,
+    "neutral": 286,
+    "positive": 52,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.31645569620253167
+  },
+  {
+    "number": 16,
+    "product_title": "Oneplus 10 pro",
+    "negative": 42,
+    "neutral": 92,
+    "positive": 194,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.6440677966101694
+  },
+  {
+    "number": 17,
+    "product_title": "Oukitel WP10",
+    "negative": 3,
+    "neutral": 19,
+    "positive": 4,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.14285714285714285
+  },
+  {
+    "number": 18,
+    "product_title": "Samsung Galaxy S20 Ultra",
+    "negative": 3,
+    "neutral": 3,
+    "positive": 20,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.7391304347826086
+  },
+  {
+    "number": 19,
+    "product_title": "Samsung Galaxy Z Flip 3",
+    "negative": 0,
+    "neutral": 66,
+    "positive": 0,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0
+  },
+  {
+    "number": 20,
+    "product_title": "Tecno Phantom X2 Pro",
+    "negative": 1,
+    "neutral": 3,
+    "positive": 15,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.875
+  },
+  {
+    "number": 21,
+    "product_title": "amsung galaxy s20 ultra",
+    "negative": 55,
+    "neutral": 0,
+    "positive": 294,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.6848137535816619
+  },
+  {
+    "number": 22,
+    "product_title": "flipkart_reviews_dataset",
+    "negative": 0,
+    "neutral": 5982,
+    "positive": 0,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0
+  },
+  {
+    "number": 23,
+    "product_title": "iQOO 9T",
+    "negative": 0,
+    "neutral": 1,
+    "positive": 3,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0
+  },
+  {
+    "number": 24,
+    "product_title": "iQOO 9T 5G",
+    "negative": 4,
+    "neutral": 13,
+    "positive": 37,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.8048780487804879
+  },
+  {
+    "number": 25,
+    "product_title": "motorola edge plu",
+    "negative": 5,
+    "neutral": 3,
+    "positive": 12,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.4117647058823529
+  },
+  {
+    "number": 26,
+    "product_title": "realme GT 2 Pr",
+    "negative": 25,
+    "neutral": 38,
+    "positive": 183,
+    "final_sentiment": "positive",
+    "final_sentiment_value\r": 0.7596153846153846
+  },
+  {
+    "number": 27,
+    "product_title": "realme GT 2 Pro 5G",
+    "negative": 26,
+    "neutral": 186,
+    "positive": 54,
+    "final_sentiment": "negative",
+    "final_sentiment_value\r": 0.35
+  }
+]
