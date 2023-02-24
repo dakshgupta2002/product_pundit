@@ -1,7 +1,6 @@
 import { useQuery } from "react-query";
-import Pagination from "../components/Pagination";
+import { Collection } from "../components/Collection";
 import { ProductItemNew } from "../components/ProductItem";
-import ReviewItem from "../components/ReviewItem";
 import Search from "../components/Search";
 import { pb } from "../utils/pocketbase";
 import { Products, ReviewsI } from "../utils/types";
@@ -66,64 +65,98 @@ export default function Reviews() {
           </div>
         </section>
 
-        <Category category={"New Arrivals"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
-            return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
-                id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
-              />
-            );
-          })}
-        </div>
-        <Pagination pages={5} />
-      </div>
-      <div>
-        <Category category={"Trending"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
-            return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
-                id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
-              />
-            );
-          })}
-        </div>
-        <Pagination />
-      </div>
-      <div>
-        <Category category={"Discover More"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
-            return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
-                id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
-              />
-            );
-          })}
-        </div>
-        <Pagination />
+        <section>
+          <div className="w-full px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+              <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8 w-3/4">
+                <div className="max-w-md mx-auto text-center lg:text-left">
+                  <header>
+                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+                      New Arrivals
+                    </h2>
+
+                    <p className="mt-4 text-gray-500">
+                      Newly launched mobile phones!
+                    </p>
+                  </header>
+
+                  <a
+                    href="#"
+                    className="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring hover:text-slate-300"
+                  >
+                    Shop All
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:col-span-2 lg:py-8">
+                <ul className="grid grid-cols-4 gap-4 text-white">
+                  {products?.items.map((item, i) => {
+                    if (i >= 4) {
+                      return;
+                    }
+                    return (
+                      <ProductItemNew
+                        id={item.id}
+                        name={item.name}
+                        description={item.name}
+                        price={item.price}
+                        image={item.picture}
+                      />
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Collection />
+
+        <section>
+          <div className="w-full px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+              <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8 w-3/4">
+                <div className="max-w-md mx-auto text-center lg:text-left">
+                  <header>
+                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+                      Trending
+                    </h2>
+
+                    <p className="mt-4 text-gray-500">
+                      Checkout the most trending phones!
+                    </p>
+                  </header>
+
+                  <a
+                    href="#"
+                    className="inline-block px-12 py-3 mt-8 text-sm font-medium text-white transition bg-gray-900 border border-gray-900 rounded hover:shadow focus:outline-none focus:ring hover:text-slate-300"
+                  >
+                    Shop All
+                  </a>
+                </div>
+              </div>
+
+              <div className="lg:col-span-2 lg:py-8">
+                <ul className="grid grid-cols-4 gap-4 text-white">
+                  {products?.items.map((item, i) => {
+                    if (i >= 4) {
+                      return;
+                    }
+                    return (
+                      <ProductItemNew
+                        id={item.id}
+                        name={item.name}
+                        description={item.name}
+                        price={item.price}
+                        image={item.picture}
+                      />
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

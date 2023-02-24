@@ -44,10 +44,10 @@ export default function ReviewItem({
   return (
     <div className="flex flex-wrap -mx-4 w-96">
       <div className="flex flex-wrap -mx-4 w-full h-full min-h-full">
-        <div className="p-4 w-full">
+        <div className="p-4 w-full h-full">
           <a
             href={`/product/${product.id}`}
-            className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden"
+            className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden h-full"
           >
             <div className="relative pb-48 overflow-hidden">
               <img
