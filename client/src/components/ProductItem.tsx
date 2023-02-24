@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BlankStar, FilledStar } from "../assets/icons";
 
 export default function ProductItem({
-  id = 5456,
+  id = "5456",
   name = "iPhone 12",
   description = "Design by Apple",
   price = 0.0,
@@ -11,9 +11,9 @@ export default function ProductItem({
   category = "Phone",
 }) {
   return (
-    <div className="flex flex-wrap -mx-4">
-      <div className="flex flex-wrap -mx-4">
-        <div className="p-4">
+    <div className="flex flex-wrap mx-7 my-4 w-60 h-1/2">
+      <div className="flex flex-wrap w-full h-full">
+        <div className="p-4 w-full h-full">
           <a
             href={`/product/${id}`}
             className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden"
@@ -69,7 +69,7 @@ export function ProductItemNew({
   const defImage =
     "https://images.unsplash.com/photo-1592921870789-04563d55041c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
   return (
-    <Link to={`/product/${id}`} className="block group">
+    <Link to={`/product/${id}`} className="block group mx-8 my-6">
       <img
         src={image || defImage}
         alt=""

@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useQuery } from "react-query";
 import Pagination from "../components/Pagination";
 import { ProductItemNew } from "../components/ProductItem";
+import ProductItem from "../components/ProductItem";
 import ReviewItem from "../components/ReviewItem";
 import Search from "../components/Search";
 import { pb } from "../utils/pocketbase";
@@ -18,7 +20,7 @@ const fetchProducts = async (): Promise<Products> => {
 
 const Category = ({ category }: any) => {
   return (
-    <h1 className="border-l-4 border-indigo-500 pl-4 mt-20 text-yellow-500">
+    <h1 className="border-l-4 border-indigo-500 pl-4 my-20 text-yellow-500">
       {category}
     </h1>
   );
@@ -30,7 +32,7 @@ export default function Reviews() {
     "produts_no",
     fetchProducts
   );
-  console.log(products);
+  console.log("items", products?.items);
   if (isLoading || productsLoading) {
     return <p>Loading.......</p>;
   }
@@ -40,85 +42,52 @@ export default function Reviews() {
       <div className="w-1/2 py-10">
         <Search />
       </div>
-      <div>
-        <section>
-          <div className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8 w-full">
-            <header className="text-center">
-              <h2 className="text-xl font-bold sm:text-3xl">
-                Most Reviewed Products
-              </h2>
-            </header>
 
-            <ul className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-7 w-full">
-              {products?.items.map((item) => {
-                return (
-                  <ProductItemNew
-                    id={item.id}
-                    name={item.name}
-                    description={item.name}
-                    price={item.price}
-                    image={item.picture}
-                    key={item.id}
-                  />
-                );
-              })}
-            </ul>
-          </div>
-        </section>
-
+      <div className="w-4/5">
         <Category category={"New Arrivals"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
+        <div className="flex flex-wrap">
+          {products?.items.slice(0, 3).map((item) => {
             return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
+              <ProductItem
                 id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
+                name={item.name}
+                description={item.name}
+                price={item.price}
+                key={item.id}
               />
             );
           })}
         </div>
         <Pagination pages={5} />
       </div>
-      <div>
+      <div className="w-4/5">
         <Category category={"Trending"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
+        <div className="flex flex-wrap">
+          {products?.items.slice(3, 5).map((item) => {
             return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
+              <ProductItem
                 id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
+                name={item.name}
+                description={item.name}
+                price={item.price}
+                key={item.id}
               />
             );
           })}
         </div>
         <Pagination />
       </div>
-      <div>
+      <div className="w-4/5">
         <Category category={"Discover More"} />
-        <div className="flex flex-wrap space-x-10">
-          {data?.items.map((item) => {
+        <div className="flex flex-wrap">
+          {products?.items.slice(5, 7).map((item) => {
             return (
-              <ReviewItem
-                product={item.expand.product_id}
-                key={item.id}
-                text={item.text}
-                description={item.summary}
+              <ProductItem
                 id={item.id}
-                rating={parseInt(item.rating)}
-                price={undefined}
-                sentiment={item.sentiment}
+                name={item.name}
+                description={item.name}
+                price={item.price}
+                key={item.id}
               />
             );
           })}

@@ -37,7 +37,7 @@ export default function ReviewItem({
   text: name,
   description,
   price = 0,
-  rating,
+  rating=3,
   product,
   sentiment,
 }: ProductItem) {
