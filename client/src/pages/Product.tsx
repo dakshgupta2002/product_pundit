@@ -271,7 +271,7 @@ export default function Product() {
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 space-y-10">
         <header className="text-center">
           <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-            Overall Satisfaction
+            Sentiment Analytics
           </h2>
         </header>
         <XYPlot

@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 
 export default function Recommendations({ name = "product" }) {
   const slides = [
@@ -39,34 +37,116 @@ export default function Recommendations({ name = "product" }) {
     setCurrentIndex(slideIndex);
   };
   return (
-    <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group flex flex-col justify-center items-center space-y-8">
-      <h1 className="text-black font-bold">
-        Similar products with better Sentiment (coming soon...)
-      </h1>
+    <section>
+      <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <header>
+          <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+            You may also like
+          </h2>
+        </header>
 
-      <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-      ></div>
-      {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+        <ul className="grid gap-4 mt-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li>
+            <a href="#" className="block overflow-hidden group">
+              <img
+                src="https://img.freepik.com/free-vector/modern-coming-soon-poster-with-stay-tuned-message_1017-39310.jpg?w=996&t=st=1677312825~exp=1677313425~hmac=a0f0c7bb1bf92ce9525183b61628b7b7382a214e0ebab0d3544b338cb660a119"
+                alt=""
+                className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+              />
+
+              {/* <div className="relative pt-3 bg-white">
+                <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                  Basic Tee
+                </h3>
+
+                <p className="mt-2">
+                  <span className="sr-only"> Regular Price </span>
+
+                  <span className="tracking-wider text-gray-900">
+                    {" "}
+                    £24.00 GBP{" "}
+                  </span>
+                </p>
+              </div> */}
+            </a>
+          </li>
+
+          <li>
+            <a href="#" className="block overflow-hidden group">
+              <img
+                src="https://img.freepik.com/free-vector/modern-coming-soon-poster-with-stay-tuned-message_1017-39310.jpg?w=996&t=st=1677312825~exp=1677313425~hmac=a0f0c7bb1bf92ce9525183b61628b7b7382a214e0ebab0d3544b338cb660a119"
+                alt=""
+                className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+              />
+
+              {/* <div className="relative pt-3 bg-white">
+                <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                  Basic Tee
+                </h3>
+
+                <p className="mt-2">
+                  <span className="sr-only"> Regular Price </span>
+
+                  <span className="tracking-wider text-gray-900">
+                    {" "}
+                    £24.00 GBP{" "}
+                  </span>
+                </p>
+              </div> */}
+            </a>
+          </li>
+
+          <li>
+            <a href="#" className="block overflow-hidden group">
+              <img
+                src="https://img.freepik.com/free-vector/modern-coming-soon-poster-with-stay-tuned-message_1017-39310.jpg?w=996&t=st=1677312825~exp=1677313425~hmac=a0f0c7bb1bf92ce9525183b61628b7b7382a214e0ebab0d3544b338cb660a119"
+                alt=""
+                className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+              />
+
+              {/* <div className="relative pt-3 bg-white">
+                <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                  Basic Tee
+                </h3>
+
+                <p className="mt-2">
+                  <span className="sr-only"> Regular Price </span>
+
+                  <span className="tracking-wider text-gray-900">
+                    {" "}
+                    £24.00 GBP{" "}
+                  </span>
+                </p>
+              </div> */}
+            </a>
+          </li>
+
+          <li>
+            <a href="#" className="block overflow-hidden group">
+              <img
+                src="https://img.freepik.com/free-vector/modern-coming-soon-poster-with-stay-tuned-message_1017-39310.jpg?w=996&t=st=1677312825~exp=1677313425~hmac=a0f0c7bb1bf92ce9525183b61628b7b7382a214e0ebab0d3544b338cb660a119"
+                alt=""
+                className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+              />
+
+              {/* <div className="relative pt-3 bg-white">
+                <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+                  Basic Tee
+                </h3>
+
+                <p className="mt-2">
+                  <span className="sr-only"> Regular Price </span>
+
+                  <span className="tracking-wider text-gray-900">
+                    {" "}
+                    £24.00 GBP{" "}
+                  </span>
+                </p>
+              </div> */}
+            </a>
+          </li>
+        </ul>
       </div>
-      {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div>
-      <div className="flex top-4 justify-center py-2">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer"
-          >
-            <RxDotFilled />
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }

@@ -92,7 +92,7 @@ export default function Reviews() {
       <div className="w-4/5">
         <Category category={"Discover More"} />
         <div className="flex flex-wrap">
-          {products?.items.slice(8,11).map((item) => {
+          {products?.items.slice(12,18).map((item) => {
             return (
               <ProductItem
                 id={item.id}
@@ -103,6 +103,7 @@ export default function Reviews() {
                 positive_count={item.positive_count}
                 negative_count={item.negative_count}
                 neutral_count={item.neutral_count}
+                image={item.picture}
               />
             );
           })}
