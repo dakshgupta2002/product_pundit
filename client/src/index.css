@@ -71,3 +71,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+#root>div>div>div.max-w-screen-xl.px-4.py-8.mx-auto.sm\:px-6.sm\:py-12.lg\:px-8.space-y-10>div>svg>g.rv-xy-plot__series.rv-xy-plot__series--bar.vertical-bar-series-example>rect:nth-child(1) {
+  stroke: #99efb7 !important;
+  fill: #99efb7 !important;
+}
+
+#root>div>div>div.max-w-screen-xl.px-4.py-8.mx-auto.sm\:px-6.sm\:py-12.lg\:px-8.space-y-10>div>svg>g.rv-xy-plot__series.rv-xy-plot__series--bar.vertical-bar-series-example>rect:nth-child(2) {
+  stroke: #a3a3a3 !important;
+  fill: #a3a3a3 !important;
+}
+
+#root>div>div>div.max-w-screen-xl.px-4.py-8.mx-auto.sm\:px-6.sm\:py-12.lg\:px-8.space-y-10>div>svg>g.rv-xy-plot__series.rv-xy-plot__series--bar.vertical-bar-series-example>rect:nth-child(3) {
+  stroke: #fcacac !important;
+  fill: #fba9a9 !important;
+}

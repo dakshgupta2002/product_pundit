@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BlankStar, FilledStar } from "../assets/icons";
+import { Sentiment } from "./Sentiment";
 
 export default function ProductItem({
   id = "5456",
@@ -9,8 +9,19 @@ export default function ProductItem({
   rating = 3,
   reviewCount = 5,
   category = "Phone",
-  image="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  image = "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  positive_count=10,
+  negative_count=1,
+  neutral_count=5
 }) {
+
+  let sentiment = "positive";
+  if (negative_count > positive_count && negative_count > neutral_count) {
+    sentiment='negative'
+  } else if (neutral_count > negative_count && neutral_count > positive_count) {
+    sentiment='neutral'
+  }
+  
   return (
     <div className="flex flex-wrap mx-7 my-4 w-60 h-full" style={{height:'450px'}} >
       <div className="flex flex-wrap w-full h-full">
@@ -38,14 +49,16 @@ export default function ProductItem({
                 <span className="text-sm font-semibold">Rs.</span>
               </div> */}
             </div>
-            <div className="p-4 flex items-center text-sm text-gray-600">
-              {[...Array(Math.floor(rating))].map((e, i) => {
+              <div className="p-4 flex items-center text-sm text-gray-600">
+                
+                <Sentiment sentiment={sentiment} />
+              {/* {[...Array(Math.floor(rating))].map((e, i) => {
                 return <FilledStar />;
               })}
               {[...Array(5 - Math.floor(rating))].map((e, i) => {
                 return <BlankStar />;
-              })}
-              <span className="ml-2">{reviewCount} Reviews</span>
+              })} */}
+              {/* <span className="ml-2">{reviewCount} Reviews</span> */}
             </div>
             </div>
           </a>
@@ -60,7 +73,6 @@ export function ProductItemNew({
   name,
   description,
   price,
-
   image,
 }: {
   id: string;

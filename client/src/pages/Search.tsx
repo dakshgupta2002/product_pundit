@@ -74,9 +74,23 @@ export default function SearchPage() {
         </form>
       </div>
       {data?.items?.length! === 0 && <p>No products found</p>}
-      {data?.items.map((item) => {
-        return <ProductItem key={item.id} name={item.text} />;
+      <div className="flex flex-wrap">
+        {data?.items.map((item) => {
+        return (
+          <ProductItem
+            id={item.id}
+            name={item.name}
+            description={item.name}
+            price={item.price}
+            key={item.id}
+            image={item.picture}
+            positive_count={item.positive_count}
+            negative_count={item.negative_count}
+            neutral_count={item.neutral_count}
+          />
+        );
       })}
+      </div>
     </div>
   );
 }

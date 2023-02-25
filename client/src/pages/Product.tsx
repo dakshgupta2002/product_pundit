@@ -1,12 +1,9 @@
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import {
-  HorizontalGridLines,
-  VerticalBarSeries,
-  VerticalGridLines,
-  XAxis,
+  VerticalBarSeries, XAxis,
   XYPlot,
-  YAxis,
+  YAxis
 } from "react-vis";
 import "react-vis/dist/style.css";
 import Recommendations from "../components/Recommendations";
@@ -50,42 +47,32 @@ export default function Product() {
 
   return (
     <div className="bg-white flex flex-col justify-center items-center pt-10">
-      <h1 className="text-black font-bold">{data?.name}</h1>
+      {/* <h1 className="text-black font-bold">{data?.name}</h1> */}
 
       <section>
         <div className="relative mx-auto max-w-screen-xl px-4 py-8">
           <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-1 p-4">
               <img
                 alt="Les Paul"
-                src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                className="aspect-square w-full rounded-xl object-cover"
+                src={data?.picture}
+                className="aspect-square w-full rounded-xl object-cover p-4 overflow-hidden rounded-lg"
               />
 
               <div className="grid grid-cols-2 gap-4 lg:mt-4">
                 <img
                   alt="Les Paul"
-                  src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={data?.picture}
                   className="aspect-square w-full rounded-xl object-cover"
                 />
 
                 <img
                   alt="Les Paul"
-                  src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={data?.picture}
                   className="aspect-square w-full rounded-xl object-cover"
                 />
 
-                <img
-                  alt="Les Paul"
-                  src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="aspect-square w-full rounded-xl object-cover"
-                />
-
-                <img
-                  alt="Les Paul"
-                  src="https://images.unsplash.com/photo-1456948927036-ad533e53865c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="aspect-square w-full rounded-xl object-cover"
-                />
+                
               </div>
             </div>
 
@@ -97,7 +84,7 @@ export default function Product() {
               <div className="mt-8 flex justify-between text-black">
                 <div className="max-w-[35ch] space-y-2">
                   <h1 className="text-xl font-bold sm:text-2xl">
-                    Fun Product That Does Something Cool
+                    {data?.name}
                   </h1>
 
                   <p className="text-sm">Highest Rated Product</p>
@@ -150,7 +137,7 @@ export default function Product() {
                   </div>
                 </div>
 
-                <p className="text-lg font-bold">$119.99</p>
+                <p className="text-lg font-bold">₹ {data?.price}</p>
               </div>
 
               <form className="mt-8 text-black">
@@ -359,8 +346,8 @@ export default function Product() {
           height={400}
           xDistance={100}
         >
-          <VerticalGridLines />
-          <HorizontalGridLines />
+          {/* <VerticalGridLines /> */}
+          {/* <HorizontalGridLines /> */}
           <XAxis />
           <YAxis />
           <VerticalBarSeries
@@ -368,6 +355,9 @@ export default function Product() {
             className="vertical-bar-series-example"
             // @ts-ignore
             data={chartData}
+            style={{
+              
+            }}
           />
         </XYPlot>
       </div>
