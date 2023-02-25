@@ -1,10 +1,6 @@
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import {
-  VerticalBarSeries, XAxis,
-  XYPlot,
-  YAxis
-} from "react-vis";
+import { VerticalBarSeries, XAxis, XYPlot, YAxis } from "react-vis";
 import "react-vis/dist/style.css";
 import Recommendations from "../components/Recommendations";
 import { ReviewCollection } from "../components/ReviewCollection";
@@ -71,8 +67,6 @@ export default function Product() {
                   src={data?.picture}
                   className="aspect-square w-full rounded-xl object-cover"
                 />
-
-                
               </div>
             </div>
 
@@ -141,50 +135,7 @@ export default function Product() {
               </div>
 
               <form className="mt-8 text-black">
-                <fieldset>
-                  <legend className="mb-1 text-sm font-medium">Color</legend>
-
-                  <div className="flex flex-wrap gap-1">
-                    <label htmlFor="color_tt" className="cursor-pointer">
-                      <input
-                        type="radio"
-                        name="color"
-                        id="color_tt"
-                        className="peer sr-only"
-                      />
-
-                      <span className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white">
-                        Texas Tea
-                      </span>
-                    </label>
-
-                    <label htmlFor="color_fr" className="cursor-pointer">
-                      <input
-                        type="radio"
-                        name="color"
-                        id="color_fr"
-                        className="peer sr-only"
-                      />
-
-                      <span className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white">
-                        Fiesta Red
-                      </span>
-                    </label>
-
-                    <label htmlFor="color_cb" className="cursor-pointer">
-                      <input
-                        type="radio"
-                        name="color"
-                        id="color_cb"
-                        className="peer sr-only"
-                      />
-
-                      <span className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white">
-                        Cobalt Blue
-                      </span>
-                    </label>
-                  </div>
-                </fieldset>
+                
 
                 <fieldset className="mt-4">
                   <legend className="mb-1 text-sm font-medium">Variant</legend>
@@ -237,17 +188,10 @@ export default function Product() {
                       <thead>
                         <tr>
                           <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                            Company
+                            Partners
                           </th>
-                          <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                            Price
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                            Color
-                          </th>
-                          <th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-                            Availability
-                          </th>
+                          
+
                           <th className="px-4 py-2"></th>
                         </tr>
                       </thead>
@@ -255,23 +199,30 @@ export default function Product() {
                       <tbody className="divide-y divide-gray-200">
                         <tr>
                           <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                            Flipkart
+                            Gokwik
                           </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            200$
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            Red
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            Yes
-                          </td>
+
                           <td className="whitespace-nowrap px-4 py-2">
                             <a
                               href="#"
                               className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                             >
-                              View
+                              Add to Cart
+                            </a>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                            Flipkart
+                          </td>
+
+                          <td className="whitespace-nowrap px-4 py-2">
+                            <a
+                              href="#"
+                              className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                            >
+                              Add to Cart
                             </a>
                           </td>
                         </tr>
@@ -280,21 +231,13 @@ export default function Product() {
                           <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                             Amazon
                           </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            400$
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            Blue
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            No
-                          </td>
+
                           <td className="whitespace-nowrap px-4 py-2">
                             <a
                               href="#"
                               className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                             >
-                              View
+                              Add to Cart
                             </a>
                           </td>
                         </tr>
@@ -303,21 +246,14 @@ export default function Product() {
                           <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                             Reliance Digital
                           </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            1000$
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            Smoke Black
-                          </td>
-                          <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                            Yes
-                          </td>
+                          
+
                           <td className="whitespace-nowrap px-4 py-2">
                             <a
                               href="#"
                               className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                             >
-                              View
+                              Add to Cart
                             </a>
                           </td>
                         </tr>
@@ -331,7 +267,6 @@ export default function Product() {
         </div>
       </section>
 
-      <ReviewCollection reviews={reviews as ReviewsI} />
 
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 space-y-10">
         <header className="text-center">
@@ -355,13 +290,12 @@ export default function Product() {
             className="vertical-bar-series-example"
             // @ts-ignore
             data={chartData}
-            style={{
-              
-            }}
+            style={{}}
           />
         </XYPlot>
       </div>
-
+      <ReviewCollection reviews={reviews as ReviewsI} />
+{/* <img src="../assets/amsung galaxy s20 ultra.png"></img> */}
       <Recommendations />
     </div>
   );

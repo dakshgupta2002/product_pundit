@@ -41,7 +41,7 @@ export default function Recommendations({ name = "product" }) {
   return (
     <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group flex flex-col justify-center items-center space-y-8">
       <h1 className="text-black font-bold">
-        Similar products with better Sentiment
+        Similar products with better Sentiment (coming soon...)
       </h1>
 
       <div
