@@ -7,34 +7,36 @@ export default function ProductItem({
   description = "Design by Apple",
   price = 0.0,
   rating = 3,
-  reviewCount = 1321,
+  reviewCount = 5,
   category = "Phone",
+  image="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
 }) {
   return (
-    <div className="flex flex-wrap mx-7 my-4 w-60 h-1/2">
+    <div className="flex flex-wrap mx-7 my-4 w-60 h-full" style={{height:'450px'}} >
       <div className="flex flex-wrap w-full h-full">
         <div className="p-4 w-full h-full">
           <a
             href={`/product/${id}`}
-            className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden"
+            className="c-card bg-white shadow-md hover:shadow-xl rounded-lg h-full flex flex-col justify-center"
           >
             <div className="relative pb-48 overflow-hidden">
               <img
-                className="absolute inset-0 h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                className="absolute inset-0 h-full w-full object-cover overflow-hidden"
+                src={image}
                 alt=""
               />
             </div>
-            <div className="p-4">
+            <div className="flex flex-col justify-between" >
+              <div className="p-4">
               <span className="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">
                 {category}
               </span>
               <h2 className="mt-2 mb-2 text-xl font-bold">{name}</h2>
               <p className="text-sm">{description}</p>
-              <div className="mt-3 flex items-center">
+              {/* <div className="mt-3 flex items-center">
                 <span className="font-bold text-xl">{price}</span>&nbsp;
                 <span className="text-sm font-semibold">Rs.</span>
-              </div>
+              </div> */}
             </div>
             <div className="p-4 flex items-center text-sm text-gray-600">
               {[...Array(Math.floor(rating))].map((e, i) => {
@@ -44,6 +46,7 @@ export default function ProductItem({
                 return <BlankStar />;
               })}
               <span className="ml-2">{reviewCount} Reviews</span>
+            </div>
             </div>
           </a>
         </div>
@@ -77,8 +80,8 @@ export function ProductItemNew({
       />
 
       <div className="mt-1.5 flex justify-between">
-        <p className="text-md text-white">{name}</p>
-        <p className="text-white">$ {price}</p>
+        <p className="text-md">{name}</p>
+        <p className="">₹ {price}</p>
       </div>
     </Link>
   );
